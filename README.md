@@ -21,7 +21,7 @@ Clase Taza, que tendrá los atributos color, capacidad y cantidad.
 * El método llenar() que establecerá la cantidad de la taza a su máxima capacidad.
 * El método "sobrecargado" llenar(Int) que establecerá la cantidad de la taza a la cantidad pasada como argumento al método.
 * Sobreescribir el método toString(), que debe retornar por ejemplo "Taza(color = BLANCO, capacidad = 50 c.c., cantidad = 30 c.c.)"
-* Por último:
+## Por último:
 
 * Clase enumerada Color, que contendrá los colores disponibles: blanco, negro, gris, azul y verde.
 * En el programa principal se deben crear 3 cafeteras de capacidad 1000, 750 y 500 c.c. con 0, 750 y 200 c.c de cantidad respectivamente. Para crear cada cafetera, debéis utilizar un constructor diferente. También debéis generar una lista de 20 tazas con la capacidad de 50, 75 y 100 de manear aleatoria. Implementar el resto de comentarios TODO de la función main().
