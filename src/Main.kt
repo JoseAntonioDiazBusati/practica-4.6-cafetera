@@ -1,13 +1,22 @@
 fun main(args: Array<String>) {
 
     //TODO: Crear 3 cafeteras en la Sala, Cocina y Oficina
+    val cafetera1 = Cafetera("Salón")
+    val cafetera2 = Cafetera("Cocina", capacidadMaxima = 750)
+    val cafetera3 = Cafetera("Oficina", capacidadMaxima = 500 ,cantidad = 200)
 
-
-    //TODO: Crear una lista de 20 tazas con capacidades aleatorias
-
+        //TODO: Crear una lista de 20 tazas con capacidades aleatorias
+    val tazas = mutableListOf<Taza>()
+    for (i in 0..20){
+        val n = 0..4
+        val taza = Taza()
+    }
 
     println("**********************************************")
     //TODO: Mostrar por pantalla el contenido de las 3 cafeteras y las tazas.
+    println(cafetera1)
+    println(cafetera2)
+    println(cafetera3)
 
 
     println("**********************************************")
@@ -40,5 +49,8 @@ fun main(args: Array<String>) {
 
     println("**********************************************")
     //TODO: Mostrar por pantalla el contenido de las 3 cafeteras y las tazas.
-
+    println(cafetera1)
+    println(cafetera2)
+    println(cafetera3)
+    println(tazas)
 }

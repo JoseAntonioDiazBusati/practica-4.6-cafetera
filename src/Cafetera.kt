@@ -1,16 +1,20 @@
 class Cafetera (val ubicacion: String) {
 
-    val capacidadMaxima: Int = 1000
+    var capacidadMaxima: Int = 1000
     var cantidad: Int = 0
 
     constructor(ubicacion: String,capacidadMaxima: Int):this(ubicacion){
+        this.capacidadMaxima = capacidadMaxima
         this.cantidad = capacidadMaxima
     }
 
     constructor(ubicacion: String,capacidadMaxima: Int,cantidad: Int):this(ubicacion,capacidadMaxima){
-        if (cantidad > capacidadMaxima){
-            this.cantidad = this.capacidadMaxima
-        }
+        this.capacidadMaxima = capacidadMaxima
+        this.cantidad = if (cantidad > capacidadMaxima)
+            capacidadMaxima
+        else
+            cantidad
+
     }
 
     fun llenar(){
