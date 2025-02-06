@@ -5,9 +5,9 @@ fun main(args: Array<String>) {
     val cafetera2 = Cafetera("Cocina", capacidadMaxima = 750)
     val cafetera3 = Cafetera("Oficina", capacidadMaxima = 500 ,cantidad = 200)
 
-        //TODO: Crear una lista de 20 tazas con capacidades aleatorias
+    //TODO: Crear una lista de 20 tazas con capacidades aleatorias
     val tazas = mutableListOf<Taza>()
-    for (i in 0..20){
+    for (i in 0..30){
         val taza = Taza.nuevaTazaAleatoria()
         tazas.add(taza)
     }
@@ -52,8 +52,9 @@ fun main(args: Array<String>) {
             if (cafetera2.cantidad !=0){
                 cafetera2.servirTaza(taza)
             }
-        }else{
-            cafetera3.servirTaza(taza)
+            if(cafetera3.cantidad != 0){
+                cafetera3.servirTaza(taza)
+            }
         }
     }
 
