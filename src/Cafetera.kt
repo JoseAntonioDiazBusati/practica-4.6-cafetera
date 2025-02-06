@@ -23,10 +23,14 @@ class Cafetera (val ubicacion: String) {
 
     fun servirTaza(taza: Taza){
         if (cantidad > 0){
-            if (taza.capacidad > cantidad){
+            val cantidadLlenar = taza.capacidad - taza.cantidad
+            if (cantidadLlenar < cantidad){
+                cantidad -= cantidadLlenar
+                taza.llenar()
+            }else{
                 taza.llenar(cantidad)
+                vaciar()
             }
-            taza.llenar()
         }
     }
 
@@ -34,7 +38,7 @@ class Cafetera (val ubicacion: String) {
         cantidad = 0
     }
 
-    fun agregarCafe(cantidadDeseada:Int){
+    fun agregarCafe(cantidadDeseada:Int = 200){
         if (cantidadDeseada > capacidadMaxima){
             cantidad = capacidadMaxima
         }
